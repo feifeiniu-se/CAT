@@ -10,7 +10,7 @@
 
 ## General Info
 
-This is the repository of CAT (Code chAnge Tactics analysis), which is in paper: "Refactoring ≠ Bug-Inducing: Improving Defect Prediction with Code Change Tactics Analysis" submitted to ICSE 2025.
+This is the repository of CAT (Code chAnge Tactics analysis), which is in paper: "Refactoring ≠ Bug-Inducing: Improving Defect Prediction with Code Change Tactics Analysis".
 
 CAT is a tool designed for fine-grained code change analysis, to untangle purely refactoring and refactoring propagated code changes from normal code changes. Given commit of code change, it identifies code changes into 18 types: Add/Del, Add/Del_Refactoring, Add/Del_Move, Add/Del_Propogation, Add/Del_Refactoring_Edit, Add/Del_Propagration_Edit, Add/Del_Refactoring_Propagation, Add/Del_Refactoring_Propagation_Edit, Add/Del_Edit. CAT leverages RefactoringMiner 2.3 to identify code refactoring and then compares code tokens to differentiate purely refactored or propagation of refactoring.
 
