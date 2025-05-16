@@ -3,6 +3,7 @@
 # Table of Contents
 
 - [General Info](#general-info)
+- [Proposed 66 RAM] (#proposed-66-ram)
 - [How to run](#how-to-run)
 - [Demonstration of Usage](#demonstration-of-usage)
 - [Application Scenarios](#application-scenarios)
@@ -13,6 +14,35 @@
 This is the repository of CAT (Code chAnge Tactics analysis), which is in paper: "Refactoring ≠ Bug-Inducing: Improving Defect Prediction with Code Change Tactics Analysis".
 
 CAT is a tool designed for fine-grained code change analysis, to untangle purely refactoring and refactoring propagated code changes from normal code changes. Given commit of code change, it identifies code changes into 18 types: Add/Del, Add/Del_Refactoring, Add/Del_Move, Add/Del_Propogation, Add/Del_Refactoring_Edit, Add/Del_Propagration_Edit, Add/Del_Refactoring_Propagation, Add/Del_Refactoring_Propagation_Edit, Add/Del_Edit. CAT leverages RefactoringMiner 2.3 to identify code refactoring and then compares code tokens to differentiate purely refactored or propagation of refactoring.
+
+## Proposed 66 RAM
+| Line-Level                                                   | Class-Level                                                         | Method-Level                                                       |
+|--------------------------------------------------------------|---------------------------------------------------------------------|--------------------------------------------------------------------|
+| No. of *Add* lines                                            | No. of *Add* lines per class                                        | No. of pure added lines per method                                 |
+| No. of *Add_Move* lines                                       | No. of *Add_Move* lines per class                                   | No. of add_move lines per method                                   |
+| No. of *Add_Refactoring* lines                                | No. of *Add_Refactoring* lines per class                            | No. of *Add_Refactoring* lines per method                          |
+| No. of *Add_Propagation* lines                                | No. of *Add_Propagation* lines per class                            | No. of *Add_Propagation* lines per method                          |
+| No. of *Add_Edit* lines                                       | No. of *Add_Edit* lines per class                                   | No. of *Add_Edit* lines per method                                 |
+| No. of *Add_Refactoring_Propagation* lines                    | No. of *Add_Refactoring_Propagation* lines per class                | No. of *Add_Refactoring_Propagation* lines per method              |
+| No. of *Add_Refactoring_Edit* lines                           | No. of *Add_Refactoring_Edit* lines per class                       | No. of *Add_Refactoring_Edit* lines per method                     |
+| No. of *Add_Propagation_Edit* lines                           | No. of *Add_Propagation_Edit* lines per class                       | No. of *Add_Propagation_Edit* lines per method                     |
+| No. of *Add_Refactoring_Propagation_Edit* lines               | No. of *Add_Refactoring_Propagation_Edit* lines per class           | No. of *Add_Refactoring_Propagation_Edit* lines per method         |
+| No. of *Delete* lines                                         | No. of *Delete* lines per class                                     | No. of *Delete* lines per method                                   |
+| No. of *Delete_Move* lines                                    | No. of *Delete_Move* lines per class                                | No. of *Delete_Move* lines per method                              |
+| No. of *Delete_Refactoring* lines                              | No. of *Delete_Refactoring* lines per class                          | No. of *Delete_Refactoring* lines per method                       |
+| No. of *Delete_Propagation* lines                              | No. of *Delete_Propagation* lines per class                          | No. of *Delete_Propagation* lines per method                       |
+| No. of *Delete_Edit* lines                                    | No. of *Delete_Edit* lines per class                                | No. of *Delete_Edit* lines per method                              |
+| No. of *Delete_Refactoring_Propagation* lines                  | No. of *Delete_Refactoring_Propagation* lines per class             | No. of *Delete_Refactoring_Propagation* lines per method           |
+| No. of *Delete_Refactoring_Edit* lines                         | No. of *Delete_Refactoring_Edit* lines per class                    | No. of *Delete_Refactoring_Edit* lines per method                  |
+| No. of *Delete_Propagation_Edit* lines                         | No. of *Delete_Propagation_Edit* lines per class                    | No. of *Delete_Propagation_Edit* lines per method                  |
+| No. of *Delete_Refactoring_Propagation_Edit* lines             | No. of *Delete_Refactoring_Propagation_Edit* lines per class        | No. of *Delete_Refactoring_Propagation_Edit* lines per method      |
+|                                                              | No. of purely added classes                                        | No. of purely added methods                                         |
+|                                                              | No. of purely deleted classes                                      | No. of purely deleted methods                                       |
+|                                                              | No. of purely moved classes                                        | No. of purely moved methods                                        |
+|                                                              | No. of purely refactored classes                                   | No. of purely refactored methods                                    |
+|                                                              | No. of purely propagated classes                                   | No. of purely propagated methods                                    |
+|                                                              | No. of edited classes                                              | No. of edited methods                                               |
+
 
 ## How to run
 
